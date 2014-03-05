@@ -1,0 +1,569 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7 no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8 no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9 no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>Optus | Personal | Home</title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:8070/static/assets/css/optus-style.css" />
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8070/static/assets/css/optus-style_2.css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8070/static/assets/css/optus-style_ie8_overrides.css" />
+    <![endif]-->
+
+    <!--
+    <link rel="stylesheet" type="text/css" href="http://localhost:8070/static/assets/assets/css/ie8-grid-foundation-4.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8070/static/assets/assets/css/optus-style_ie8.css" />
+    -->
+    <script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/vendors/modernizr.js"> </script>
+</head>
+
+<body class="homepage personal-home" data-grid-framework="f4" data-grid-color="black" data-grid-opacity="0.2" data-grid-zindex="10">
+
+<!-- Skip Links -->
+<ul class="skip-links">
+    <li><a href="#nav-site-level" title="Skip to Optus Navigation">Skip to Optus Navigation</a></li>
+    <li><a href="#nav-primary-level" title="Skip to Personal Navigation">Skip to Personal Navigation</a></li>
+    <li><a href="#main" title="Skip to Content">Skip to Content</a></li>
+    <li><a href="#global_footer" title="Skip to Footer">Skip to Footer</a></li>
+</ul>
+<!-- // Skip Links -->
+
+<!-- View container // start -->
+
+<!--
+.theme-primary
+    Is default styling, no class required
+.theme-business
+    Must be applied on .container-view DIV to style the Mobile Nav, Header and Footer.
+    Can also be applied to <header> or <footer> when used seperately (in Bronze treatment pages)
+-->
+
+<div class="container-view theme-primary">
+<!--  Navigation: Burger Nav Container // start -->
+<div class="container-nav visuallyhidden" aria-hidden="true"></div>
+<!--  Navigation: Burger Nav Container // end -->
+
+<!--  Body: Body Container // contains site // start -->
+<div class="container-body">
+<div class="container-body-dimmer visuallyhidden" aria-hidden="true"></div>
+
+
+<!-- Header // start -->
+<header>
+
+    <div id="global_header" class="header row collapse">
+
+        <!-- Optus Header // start -->
+        <div class="header-sitewide zindex-top">
+
+            <a class="logo left" href="index.html"><span>Optus Home</span></a>
+            <ul id="nav-site-level" class="inline-list left nav-site-level">
+                <li><a href="personal.html" class="active">Personal</a></li>
+                <li><a href="business.html">Business</a></li>
+            </ul>
+
+            <ul class="inline-list right">
+                <li>
+                    <!-- Header Search Start -->
+                    <div class="hide-for-large-up" aria-hidden="true">
+                        <a href="#" class="button text no-link-decoration"><span class="ico ico-global ico-search"></span></a>
+                    </div>
+                    <div class="show-for-large-up">
+                        <!-- OLD
+                            <a href="#" class="button radius small outline"><span class="ico ico-global ico-search"></span>Search</a>
+                        -->
+                        <form class="custom-header-search"><fieldset>
+                            <legend class="visuallyhidden">Site Search</legend>
+                            <div class="field-group radius small outline">
+                                <label class="visuallyhidden">Enter a search term</label>
+                                <input type="text" class="left field-input autocomplete clearable-input" placeholder="Search" value="" />
+                                <input type="submit" class="right field-submit ico ico-only ico-global ico-search" value="Submit" />
+                                <div class="autocomplete-suggestive-text">
+                                    <ul class="container">
+                                        <li><a href="#"><span><strong>test</strong>,</span> test</a></li>
+                                        <li><a href="#"><span><strong>test</strong>,</span> test</a></li>
+                                    </ul>
+                                </div>
+                            </div></fieldset>
+                        </form>
+                    </div>
+                    <!-- // Header Search End -->
+                </li>
+                <li>
+                    <!-- Logged out -->
+                    <div class="hide-for-small">
+                        <a href="//www.optus.com.au/customercentre/myaccount" class="button radius small yellow">Login</a>
+                    </div>
+                    <div class="show-for-small">
+                        <a href="//www.optus.com.au/customercentre/myaccount" class="button text no-link-decoration"><span class="ico ico-global ico-login"></span><span class="hide-for-small">Login</span></a>
+                    </div>
+                    <!-- // Header Logged out end -->
+                </li>
+            </ul>
+
+        </div>
+        <!-- Header // end -->
+
+        <!-- Nav // start -->
+        <div class="large-12 columns">
+
+            {{#navigation}}
+                {{> patterns/navigation.html}}
+            {{/navigation}}
+        </div>
+        <!-- Nav // end -->
+    </div>
+
+
+    {{#banner}}
+        {{> patterns/banner.html}}
+    {{/banner}}
+
+    <!-- Banner Sidebar Links // start -->
+    <div class="banner-position at-top zindex-top">
+        <div class="row">
+
+
+            <div class="banner-links">
+
+                <div class="quick-links">
+                    <ul>
+                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-pay-bill"></span><span class="vertically-center"><span>Pay Your Bill</span></span></a></li>
+                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-view-bill"></span><span class="vertically-center"><span>Check Bills</span></span></a></li>
+                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-recharge"></span><span class="vertically-center"><span>Recharge Now</span></span></a></li>
+                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-usage"></span><span class="vertically-center"><span>Check Usage</span></span></a></li>
+                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-track-order"></span><span class="vertically-center"><span>Track An Order</span></span></a></li>
+                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-activate-sim"></span><span class="vertically-center"><span>Activate SIM</span></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="social-links">
+                    <h2 class="title_lets-talk img-replacement zindex-top">
+                        <span>Let's Talk</span>
+                    </h2>
+                    <ul>
+                        <li class="small-12 medium-4 large-12"><a href="#"><span class="ico ico-teal25 ico-facebook"></span><span class="vertically-center"><span>Ask us on Facebook</span></span></a></li>
+                        <li class="small-12 medium-4 large-12"><a href="#"><span class="ico ico-teal25 ico-twitter"></span><span class="vertically-center"><span>Live service on Twitter</span></span></a></li>
+                        <li class="small-12 medium-4 large-12"><a href="#"><span class="ico ico-teal25 ico-optus-community"></span><span class="vertically-center"><span>My Optus Community</span></span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Banner Sidebar Links // end -->
+
+</header>
+<!-- Header // end -->
+
+<!-- Main Content // start -->
+<div id="main">
+
+    <!-- use this div if you want to wrap content is a colour -->
+    <div class="medium-bg-light-grey">
+        <div class="row">
+            <div class="medium-12 large-12 columns">
+                <!-- feature with two image and content, content right, image left -->
+                <div class="row feature">
+                    <!-- if image is right aligned, add 'medium-push-1 large-push-1' class -->
+                    <div class="small-12 medium-6 large-6 columns">
+                        <div class="feature-image">
+                            <!-- this could potentially be an image or a video -->
+                            <!-- use the data-interchange attribute to specify alternate images -->
+                            <img src="http://localhost:8070/static/assets/images/_content-managed/homepage/featured-tiles/featuretile-laptop-glasses.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- if content is left aligned, add 'medium-pull-6 large-pull-6' class -->
+                    <div class="small-12 medium-5 large-5 columns medium-pull-1 large-pull-1">
+                        <div class="feature-body-centered">
+                            <div class="feature-body">
+                                <h2>Home Sweet Connected Home</h2>
+                                <p>All your devices will be BFFs with our home bundles. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>
+                                    <a href="#" class="button radius">Find out more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // feature -->
+            </div>
+        </div>
+    </div>
+
+    <!-- use this div if you want to wrap content is a colour -->
+    <div class="">
+        <div class="row">
+            <div class="medium-12 large-12 columns">
+                <!-- feature with two image and content, content right, image left -->
+                <div class="row feature">
+                    <!-- if image is right aligned, add 'medium-push-6' class -->
+                    <div class="small-12 medium-6 large-6 columns medium-push-6 large-push-6">
+                        <div class="feature-image">
+                            <!-- this could potentially be an image or a video -->
+                            <!-- use the data-interchange attribute to specify alternate images -->
+                            <img src="http://localhost:8070/static/assets/images/_content-managed/homepage/featured-tiles/img_yes.png" data-interchange="[http://localhost:8070/static/assets/images/_content-managed/homepage/featured-tiles/img_yes_mobile.png, (default)], [http://localhost:8070/static/assets/images/_content-managed/homepage/featured-tiles/img_yes.png, (small)]" alt="" />
+                        </div>
+                    </div>
+                    <!-- if content is left aligned, add 'medium-pull-6' class -->
+                    <div class="small-12 medium-5 large-5 columns medium-pull-6 large-pull-6">
+                        <div class="feature-body-centered">
+                            <div class="feature-body">
+                                <h2>One Little Word,<br/> One Big Meaning</h2>
+                                <p>Optus is bringing yes back in a big way. Mauris sed lectus libero facilisis laoreet facilisis ut sapien.</p>
+                                <p>
+                                    <a href="#" class="button radius">Find out more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // feature -->
+            </div>
+        </div>
+    </div>
+
+    <!-- highlight div -->
+    <!-- use this div if you want to wrap content is a colour -->
+    <div class="">
+        <div class="row">
+            <div class="medium-12 large-12 columns">
+                <!-- feature promo -->
+                <div class="row feature feature-promo">
+                    <!-- if there are more than two features make the column smaller eg. large-4 for 3 up or large-3 for 4 up etc. -->
+                    <div class="medium-6 large-6 columns">
+                        <div class="feature-container">
+                            <div class="feature-image">
+                                <a href="#"><img src="http://localhost:8070/static/assets/images/_content-managed/homepage/promo-tiles/tile_tablet-and-iphone.png" alt=""></a>
+                            </div>
+                            <div class="feature-body">
+                                <h3><a href="#">Fits like your favourite jeans</a></h3>
+                                <p>Let us tailor a solution to suit you. Mauris sed lectus et libero facilisis laoreet facilisis ut sapien. Nunc tincidunt, eros euismod. </p>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="medium-6 large-6 columns">
+                        <div class="feature-container">
+                            <div class="feature-image">
+                                <a href="#"><img src="http://localhost:8070/static/assets/images/_content-managed/homepage/promo-tiles/tile_brb-network-improvements.png" alt=""></a>
+                            </div>
+                            <div class="feature-body">
+                                <h3><a href="#">BRB making network improvements</a></h3>
+                                <p>Stay up to date with real time network and system updates. Mauris sed lectus et libero facilisis laoreet facilisis ut sapien.</p>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+                <!-- // feature promo -->
+            </div>
+        </div>
+    </div>
+    <!-- // highlight div -->
+</div>
+<!-- Main Content // end -->
+
+<!-- Footer // start -->
+<footer>
+
+    <div class="footer-tiles">
+        <div class="row">
+            <div class="small-12 columns">
+                <h6 class="footer-tiles-title">
+                    <span class="title-before">Say</span>
+                    <span class="title-img ico ico-footer ico-yes img-replacement">YES</span>
+                    <span class="title-after">to...</span>
+                </h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="medium-6 columns">
+                <div class="row">
+                    <div class="small-6 columns">
+                        <div class="tile-footer">
+                            <a href="#">
+                                <span class="ico ico-footer ico-support"></span>
+                                <span class="tile-title">Support when you need it</span>
+                            </a>
+                            <p class="show-for-large-up">We&#39;ve got your back with live social help and detailed support articles.</p>
+                        </div>
+                    </div>
+
+                    <div class="small-6 columns">
+                        <div class="tile-footer">
+                            <a href="#">
+                                <span class="ico ico-footer ico-clever-plans"></span>
+                                <span class="tile-title">Clever Optus my plans</span>
+                            </a>
+                            <p class="show-for-large-up">Mobile phone plans that flex to how you use your phone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="medium-6 columns">
+                <div class="row">
+                    <div class="small-6 columns">
+                        <div class="tile-footer">
+                            <a href="#">
+                                <span class="ico ico-footer ico-network"></span>
+                                <span class="tile-title">Your Optus Network</span>
+                            </a>
+                            <p class="show-for-large-up">Bringing people closer is at the core of everything we do at Optus.</p>
+                        </div>
+                    </div>
+
+                    <div class="small-6 columns">
+                        <div class="tile-footer">
+                            <a href="#">
+                                <span class="ico ico-footer ico-rewards"></span>
+                                <span class="tile-title">Real rewards</span>
+                            </a>
+                            <p class="show-for-large-up">Earn Quantas frequent flyer points rewards on most Optus services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="global_footer">
+        <div class="footer-category-links">
+            <div class="row">
+                <div class="columns">
+                    <h6 class="footer-tiles-title">Looking for something else?</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="footer-categories-bg">
+                    <div class="large-2 medium-4 small-6 columns">
+                        <div class="footer-category">
+                            <a href="category-mobile.html">
+                                <span class="ico ico-mobile"></span>
+                                <span class="footer-category-name">Mobile</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="large-2 medium-4 small-6 columns">
+                        <div class="footer-category">
+                            <a href="category-tablet.html">
+                                <span class="ico ico-tablet"></span>
+                                <span class="footer-category-name">Tablet</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="large-2 medium-4 small-6 columns">
+                        <div class="footer-category">
+                            <a href="category-internet.html">
+                                <span class="ico ico-broadband"></span>
+                                <span class="footer-category-name">Broadband</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="large-2 medium-4 small-6 columns">
+                        <div class="footer-category">
+                            <a href="category-homephone.html">
+                                <span class="ico ico-contact-us"></span>
+                                <span class="footer-category-name">Home phone</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="large-2 medium-4 small-6 columns">
+                        <div class="footer-category">
+                            <a href="category-bundles.html">
+                                <span class="ico ico-bundles"></span>
+                                <span class="footer-category-name">Bundles</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="large-2 medium-4 small-6 columns">
+                        <div class="footer-category">
+                            <a href="category-tv.html">
+                                <span class="ico ico-tv"></span>
+                                <span class="footer-category-name">TV</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <hr />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-8 columns footer-links-bg">
+
+                <div class="row collapse">
+                    <div class="footer-links">
+
+                        <div class="columns medium-12">
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Stores</a></li>
+                                <li><a href="#">MyOptus Apps</a></li>
+                                <li><a href="#">MyRewards</a></li>
+                                <li><a href="#">MyCommunity</a></li>
+                                <!-- <li><a href="#">T<span class="hide-for-medium">erms</span> &amp; C<span class="hide-for-medium">ondition</span>s</a></li> -->
+                                <li><a href="#">Accessibility</a></li>
+                                <li><a href="#">Copyright</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Standard Agreement</a></li>
+                                <li><a href="#">Optus Usage Guidelines</a></li>
+                                <li><a href="#">Critical Information Summary</a></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="large-4 columns">
+
+                <div class="row collapse">
+                    <div class="columns medium-7 medium-push-5 large-12 large-push-0">
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#"><span class="ico ico-only ico-footer-social ico-facebook"></span></a></li>
+                                <li><a href="#"><span class="ico ico-only ico-footer-social ico-twitter"></span></a></li>
+                                <li><a href="#"><span class="ico ico-only ico-footer-social ico-youtube"></span></a></li>
+                                <li><a href="#"><span class="ico ico-only ico-footer-social ico-linkedin"></span></a></li>
+                                <li><a href="#"><span class="ico ico-only ico-footer-social ico-googleplus"></span></a></li>
+                                <li><a href="#"><span class="ico ico-only ico-footer-social ico-pinterest"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="columns medium-5 medium-pull-7 large-12 large-push-0">
+                        <div class="footer-info">
+                            <span class="copyright">&copy;2013 Singtel Optus Pty Limited</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!-- Footer // end -->
+
+</div>
+<!--  Body: Body Container // contains site // end -->
+</div>
+<!-- View container // end -->
+
+
+<!-- Global Script Includes -->
+<script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/vendors/jquery.js"></script>
+<script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/vendors/foundation/foundation.js"></script>
+<script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/app/nav.js"></script>
+<script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/app/tabs-feature.js"></script>
+<script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/app/accessibility.js"></script>
+
+<!-- Global Conditional Scripts -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/vendors/respond.min.js"></script>
+<script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/optus-ie8.js"></script>
+<![endif]-->
+
+<!-- Local Scripts (just used on this page) -->
+<script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/vendors/foundation/foundation.interchange.js"></script>
+<script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/app/foundation.interchange.override.js"></script>
+
+
+<!-- Global Run -->
+<script type="text/javascript">
+    $(function() {
+
+        // Foundation ------------------
+        $(document).foundation();
+
+        // Header ------------------
+
+        // Header Search expander
+        var $obj = $('form.custom-header-search');
+
+        if ($obj.length) {
+            // Initial disable if not focused
+            $obj.find('.field-submit.ico-search').attr('disabled','disabled');
+
+            $obj.find('.field-input').on({
+                focus: function(e) {
+                    e.preventDefault();
+                    $obj.addClass('focus');
+                    $obj.find('.field-submit.ico-search')
+                            .addClass('ico-search_focus')
+                            .removeAttr('disabled');
+                }, blur: function(){
+                    if ($.trim($obj.find('.field-input').val()).length == 0) {
+                        $obj.removeClass('focus');
+                        $obj.find('.field-submit.ico-search')
+                                .removeClass('ico-search_focus')
+                                .attr('disabled','disabled');
+                    }
+                }
+            });
+
+        }
+
+        // Global ------------------
+
+        // Clearable input
+        /*$('<span class="clear-input"></span>').insertAfter('input.clearable-input');
+
+         $('input.clearable-input').on({
+         focusin: function(){
+         $(this).next('.clear-input').addClass('show');
+         }, focusout: function(){
+         $(this).next('.clear-input').removeClass('show');
+         }
+         });*/
+
+
+        // TEMPORARY SCRIPTS FOR DEMONSTRATION PURPOSES ONLY --------------------
+
+        //on focus reveal dropdown for demostration.
+        $('.autocomplete').on('focusin', function(){
+            $(this).parent().find('.autocomplete-suggestive-text').addClass('active');
+        }).on('focusout', function(){
+                    $(this).parent().find('.autocomplete-suggestive-text').removeClass('active');
+                });
+
+
+        $('a[data-toggle-open]').click(function(e) {
+            e.preventDefault();
+            $_target = $('[data-toggle-open-id="' + $(this).attr('data-toggle-open') + '"]');
+            $_target.toggleClass('open');
+        })
+
+
+    });
+</script>
+
+
+
+<!-- Local Run (just used on this page) -->
+</body>
+</html>

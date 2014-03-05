@@ -1,0 +1,27 @@
+{
+  "name": "poc-templates",
+  "version": "0.0.0",
+  "description": "POC of centralized templating",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CorporateSkunks/poc-templates.git"
+  },
+  "author": "Guillaume Poulet-Mathis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CorporateSkunks/poc-templates/issues"
+  },
+  "homepage": "https://github.com/CorporateSkunks/poc-templates",
+  "dependencies": {
+    "express": "~3.4.8",
+    "grunt": "~0.4.2",
+    "grunt-mustache-precompile": "~0.1.1",
+    "mu2": "~0.5.20",
+    "online-style-guide": "git+ssh://isdp-git@git01.syd.optusnet.com.au:45222/OnlineStyleGuide"
+  }
+}

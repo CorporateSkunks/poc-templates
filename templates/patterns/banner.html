@@ -1,0 +1,50 @@
+
+<!-- Banner // start
+  Options
+  ===========
+  Layout Types >
+    (no class) : Text only, left aligned full width across
+    banner-with-product : Slimmer image (270px) on left, text right. For mobile product images.
+    banner-with-wide-product : Image on left (370px), text right. For other product images.
+    banner-with-talent : Full width image, text contained to left
+  Height >
+    banner-grande : Set height to fit (6) Quicklinks and (3) Social links.
+    banner-tall : Set height to fit (6) Quicklinks only.
+    banner-short : Set height to fit (3) Social links.
+    banner-default : Set height for banners when there are (0) no Quicklinks or Social links (Only applies to Business)
+  Other / Misc >
+    image-overlap : For .banner-image to push out of banner area
+    -->
+<div class="banner-bg banner-with-talent banner-grande zindex-bottom">
+    <div class="row collapse">
+
+        <div class="columns medium-7 large-12 zindex-top">
+            <div class="banner-content">
+
+                <h1>{{heading}}</h1>
+
+                <div class="banner-text">
+                    <div class="intro-text">
+                        <p>{{lead}}</p>
+                        <p class="smallprint">{{smallPrint}}</p>
+                    </div>
+
+                    <a href="#" class="button radius large yellow">{{cta}}</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="columns medium-5 large-12 banner-position at-bottom zindex-bottom">
+            <div class="row">
+
+                <div class="banner-image large-is-absolute ">
+                    <img src="http://localhost:8070/static/assets/images/_content-managed/banner/{{image}}" data-interchange="[http://localhost:8070/static/assets/images/_content-managed/banner/banner_talentshot_mobile.png, (default)], [http://localhost:8070/static/assets/images/_content-managed/banner/banner_talentshot.png, (medium)]" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Banner // end -->
