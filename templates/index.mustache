@@ -29,6 +29,12 @@
     <link rel="stylesheet" type="text/css" href="http://localhost:8070/static/assets/assets/css/optus-style_ie8.css" />
     -->
     <script type="text/javascript" src="http://localhost:8070/static/assets/javascripts/source/vendors/modernizr.js"> </script>
+
+    <script src="http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js"></script>
+    <script type="text/javascript" src="/static/patterns.js"> </script>
+
+
+
 </head>
 
 <body class="homepage personal-home" data-grid-framework="f4" data-grid-color="black" data-grid-opacity="0.2" data-grid-zindex="10">
@@ -119,19 +125,21 @@
         <!-- Header // end -->
 
         <!-- Nav // start -->
-        <div class="large-12 columns">
-
+        <div class="large-12 columns" id="poc-navigation">
             {{#navigation}}
-                {{> patterns/navigation.html}}
+                {{> patterns/navigation.mustache}}
             {{/navigation}}
         </div>
         <!-- Nav // end -->
     </div>
 
 
-    {{#banner}}
-        {{> patterns/banner.html}}
-    {{/banner}}
+    <div id="poc-banner">
+        {{#banner}}
+            {{> patterns/banner.mustache}}
+        {{/banner}}
+    </div>
+
 
     <!-- Banner Sidebar Links // start -->
     <div class="banner-position at-top zindex-top">
@@ -140,16 +148,13 @@
 
             <div class="banner-links">
 
-                <div class="quick-links">
-                    <ul>
-                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-pay-bill"></span><span class="vertically-center"><span>Pay Your Bill</span></span></a></li>
-                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-view-bill"></span><span class="vertically-center"><span>Check Bills</span></span></a></li>
-                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-recharge"></span><span class="vertically-center"><span>Recharge Now</span></span></a></li>
-                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-usage"></span><span class="vertically-center"><span>Check Usage</span></span></a></li>
-                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-track-order"></span><span class="vertically-center"><span>Track An Order</span></span></a></li>
-                        <li class="small-4 medium-2 large-6"><a href="#"><span class="ico ico-quicktasks ico-activate-sim"></span><span class="vertically-center"><span>Activate SIM</span></span></a></li>
-                    </ul>
+                <div id="poc-quicklinks">
+                    {{#quickLinks}}
+                        {{> patterns/quicklinks.mustache }}
+                    {{/quickLinks}}
                 </div>
+
+
 
                 <div class="social-links">
                     <h2 class="title_lets-talk img-replacement zindex-top">
@@ -560,6 +565,15 @@
 
 
     });
+
+
+    $(function() {
+
+        // render navigation with different items
+
+    });
+
+
 </script>
 
 

@@ -12,14 +12,14 @@ var mu   = require('mu2');
 mu.root = __dirname + '/templates';
 
 
-app.use(express.static(__dirname + '/public'));
+app.use('/static', express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
 //    res.send('hello world');
 
     mu.clearCache();
 
-    var stream = mu.compileAndRender('index.html', {
+    var stream = mu.compileAndRender('index.mustache', {
         name: "john",
         banner: {
           heading: "Nice to put a face to a name",
@@ -28,11 +28,26 @@ app.get('/', function(req, res){
           cta: "Shop now",
           image: "banner_talentshot_mobile.png"
         },
+        quickLinks: {
+            items: [{
+                title: "Pay bill",
+                icon: "pay-bill"
+            }, {
+                title: "Check bill",
+                icon: "view-bill"
+            }, {
+                title: "Recharge now",
+                icon: "recharge"
+            }, {
+                title: "Usage",
+                icon: "usage"
+            }]
+        },
         navigation: {
             items: [{
                 title: "Mobile",
                 link: "category-mobile.html",
-                icon: "personal_mobile"
+                icon: "personal_home-phone"
             },{
                 title: "Tablet",
                 link: "category-mobile.html",
